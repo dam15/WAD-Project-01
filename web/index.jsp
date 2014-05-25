@@ -81,7 +81,7 @@ ddsmoothmenu.init({
                                             <li><a class="menu" href="#templatemo_about">Sobre nosotros</a></li>
                                             <li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
                                             <li><a class="menu" href="#templatemo_blog">Blog</a></li>
-                                            <li><a class="menu" href="#templatemo_contact">Contactanos</a></li>
+                                            <li><a class="menu" href="#templatemo_login1">registrarse</a></li>
                                             <li><a class="menu" href="#templatemo_login">Login</a></li>
                                         </ul>
             </nav>
@@ -516,44 +516,31 @@ ddsmoothmenu.init({
     
     
     <!--Contact Start -->
-    <div class="templatemo_lightgrey" id="templatemo_contact">
+    <div class="templatemo_lightgrey" id="templatemo_login1">
     	<div class="templatemo_paracenter">
-    	<h2>Contactanos</h2></div>
+    	<h2>Inicio de Sesion</h2></div>
         <div class="clear"></div>
         <div class="container">
         	<div class="templatemo_paracenter">
-            Si tienes alguna duda de nuestros servicios, o quieres utilizar AirPadlook para un negocio, puedes contactarnos
+            Pellentesque aliquam in risus eu ultrices. Suspendisse id interdum nibh. Etiam vel mattis augue, a vestibulum arcu. Nam rutrum diam dolor, eu vehicula nisl tincidunt non. Fusce tincidunt id justo eu tempor. Phasellus sit amet ante lobortis, mattis sapien id, dictum ipsum.
             </div>
             <div class="clear"></div>
             <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="templatemo_maps">
-              <div class="fluid-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12084.143170610365!2d-73.96770330299584!3d40.783227259584116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral+Park!5e0!3m2!1sen!2s!4v1391601567888"></iframe> 
-              </div>
-            </div>
-          </div>
           <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <form role="form">
+              <form role="form" action="Welcome.do" method="post">
               <div class="form-group">
-                <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Nombre" maxlength="30">
+                <input name="nombreUsuario" type="text" class="form-control" id="fullname" placeholder="Nombre de Usuario" maxlength="30">
               </div>
               <div class="form-group">
-                <input name="email" type="text" class="form-control" id="email" placeholder="Email" maxlength="30">
+                <input name="subject" type="text" class="form-control" id="subject" placeholder="Your Subject" maxlength="40">
               </div>
-              <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" placeholder="Asunto" maxlength="40">
+              <div>
+                  <input type="submit" class="btn btn-primary" value="Inicio Sesion">
               </div>
-              <div><button type="button" class="btn btn-primary">Enviar Mensaje</button></div>
             </form>
-          </div>
-          <div class="col-md-9">
-            <div class="txtarea">
-              <textarea name="message" rows="10" class="form-control" id="message"></textarea>
-            </div>
           </div>
         </div>
       </div>
