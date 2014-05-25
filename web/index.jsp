@@ -1,7 +1,9 @@
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 
-
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -515,15 +517,15 @@ ddsmoothmenu.init({
     <!--Our Client End-->
     
     
-    <!--Contact Start -->
+    <!--Registro Start -->
     <div class="templatemo_lightgrey" id="templatemo_login1">
     	<div class="templatemo_paracenter">
-    	<h2>Inicio de Sesion</h2></div>
+    	<h2><bean:message key="index.registro.title"/></h2></div>
         <div class="clear"></div>
         <div class="container">
         	<div class="templatemo_paracenter">
-            Pellentesque aliquam in risus eu ultrices. Suspendisse id interdum nibh. Etiam vel mattis augue, a vestibulum arcu. Nam rutrum diam dolor, eu vehicula nisl tincidunt non. Fusce tincidunt id justo eu tempor. Phasellus sit amet ante lobortis, mattis sapien id, dictum ipsum.
-            </div>
+                    <bean:message key="index.registro.mensaje"/>
+                </div>
             <div class="clear"></div>
             <div class="container">
         <div class="row">
@@ -532,13 +534,25 @@ ddsmoothmenu.init({
           <div class="col-md-3">
               <form role="form" action="Welcome.do" method="post">
               <div class="form-group">
-                <input name="nombreUsuario" type="text" class="form-control" id="fullname" placeholder="Nombre de Usuario" maxlength="30">
+                  <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" maxlength="40">
+              </div>
+                  <div class="form-group">
+                  <input name="paterno" type="text" class="form-control" id="paterno" placeholder="Paterno" maxlength="40">
+              </div>
+                  <div class="form-group">
+                  <input name="materno" type="text" class="form-control" id="materno" placeholder="Materno" maxlength="40">
+              </div>
+                  <div class="form-group">
+                      <input name="correo" type="email" class="form-control" id="email" placeholder="Email" maxlength="40">
+              </div>
+                  <div class="form-group">
+                  <input name="Username" type="text" class="form-control" id="Username" placeholder="Nombre de usuario" maxlength="40">
               </div>
               <div class="form-group">
-                <input name="subject" type="text" class="form-control" id="subject" placeholder="Your Subject" maxlength="40">
+                  <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña" maxlength="40">
               </div>
               <div>
-                  <input type="submit" class="btn btn-primary" value="Inicio Sesion">
+                  <input type="submit" class="btn btn-primary" value="Registrarse">
               </div>
             </form>
           </div>
@@ -549,7 +563,7 @@ ddsmoothmenu.init({
         </div>
   </div>
     
-    <!--Contact End-->
+    <!--Registro End-->
     
     <!--Login Start -->
     <div class="templatemo_lightgrey" id="templatemo_login">
