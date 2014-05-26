@@ -95,10 +95,12 @@
                                 <div id="top-menu">
                                     <nav class="mainMenu">
                                         <ul class="nav">
-                                            <li><a class="menu" href="SubirArchivo.jsp">Archivos</a></li>
+                                            <li><a class="menu" href="#muestraArchivos">Archivos</a></li>
+                                            <!--
                                             <li><a class="menu" href="#templatemo_about">Sobre nosotros</a></li>
                                             <li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
-                                            <li><a class="menu" href="#subir_archivo">Subir Archivo</a></li>
+                                            -->
+                                            <li><a class="menu" href="#templatemo_blog">Subir Archivo</a></li>
                                             <li><a class="menu" href="perfil.jsp">Mi perfil</a></li>
                                             <li><a class="menu" href="index.html">Logout</a></li>
                                                 
@@ -112,20 +114,6 @@
             </div>
             <div class="clear"></div>
             <!-- end menu -->
-            <div  id="slider"  class="nivoSlider templatemo_slider">
-                <a href="#"><img src="images/slider/img_1_blank.jpg" alt="slide 1" /></a>           	
-                <a href="#"><img src="images/slider/img_2_blank.jpg" alt="slide 2" /></a>  
-                <a href="#"><img src="images/slider/img_3_blank.jpg" alt="slide 3" /></a> 	        	
-
-            </div>
-            <div class="templatemo_caption">
-                <div class="templatemo_slidetitle">Tus archivos seguros y al alcance de tu mano...</div>
-                <div class="clear"></div>
-                <h1>Espacio de Almacenamiento Ilimitado</h1>
-                <div class="clear"></div>
-                <p>AirPadlook es un centro de almacenamiento en linea donde puedes guardar todo tipo de archivos de manera segura rapida y siempre al alcance de tu mano</p>
-                <a class="btn btn-large btn-primary" href="#">Read More</a>
-            </div>  
         </header>
         <div class="templatemo_lightgrey_about" id="templatemo_about">
             <div class="container">
@@ -188,20 +176,9 @@
             </div>
         </div>
 
-        <div class="clear"></div>
-        <div class="templatemo_reasonbg">
-            <h2>Razones para elegir AirPadlook</h2>
-            <p>No hay limite de carga!!!</p>
-            <div class="clear height10"></div>
-            <div class="fa fa-bell-o"></div>
-            <div class="fa fa-tablet"></div>
-            <div class="fa fa-lock"></div>
-            <div class="clear height20"></div>
-            <a class="btn btn-large btn-primary" href="#">Read More</a>
-        </div>
-        <div class="clear"></div>
+       
         <!--Our Portfolio Start-->
-        <div class="templatemo_portfolio" id="templatemo_portfolio">
+        <div class="templatemo_portfolio" id="muestraArchivos">
             <h2>Nuestro portafolio</h2>
             <p>Tus archivos disponibles y faciles de compartir...</p>
 
@@ -374,8 +351,10 @@
             <a class="btn btn-large btn-primary" href="#">View More</a>
         </div>
         <!--Our Portfolio End-->
+        
+        
         <div class="clear"></div>
-        <!--Our Blog Start-->
+        <!--Our Blog Start y subir de archivos-->
         <div class="templatemo_blog" id="templatemo_blog">
             <h2>Our blog</h2>
             <p>Check out our latest posts.</p>
@@ -452,87 +431,7 @@
             </div>
         </div>
         <!--Our Blog End-->
-        <!--Our Partner Start-->
-        <div class="section6 templatemo_partner" id="templatemo_partners">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="secHeader">
-                            <h2 class="text-center">Our partners</h2>
-                            <p class="text-center">Etiam faucibus turpis id ipsum egestas porta. Cras in aliquet purus, ac varius turpis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="partnerWrap">
-                <div class="slideshow" 
-                     data-cycle-fx=carousel
-                     data-cycle-timeout=0
-                     data-cycle-carousel-visible=4
-                     data-cycle-next="#next"
-                     data-cycle-prev="#prev"
-                     data-cycle-carousel-fluid=true
-                     >
-                    <img alt="partner 1" src="images/partners/partner1.jpg" >
-                    <img alt="partner 2" src="images/partners/partner2.jpg" >
-                    <img alt="partner 3" src="images/partners/partner3.jpg" >
-                    <img alt="partner 4" src="images/partners/partner4.jpg" >
-                    <img alt="partner 5" src="images/partners/partner5.jpg" >
-                    <img alt="partner 6" src="images/partners/partner6.jpg" >
-                    <img alt="partner 7" src="images/partners/partner7.jpg" >
-                    <img alt="partner 8" src="images/partners/partner8.jpg" >
-                </div>
-                <a href="#" id="prev">&lt;&lt; Prev </a>
-                <a href="#" id="next"> Next &gt;&gt; </a>
-            </div>
-
-        </div>
-        <!--Our Partner End-->
-        <!--Our Client Start-->
-        <div class="templatemo_reasonbg">
-            <h2>What our clients say?</h2>
-            <div class="container">
-                <div class="col-xs-11 templatemo_col12 templatemo_clientwrapper">
-                    <div class="templatemo_clientimage">
-                        <p class="templatemo_clientdes">Duis consequat ut quam ut sollicitudin. Donec eget congue ligula, eget pharetra urna. Nam tempor tellus sit amet bibendum dapibus.</p>
-                        <img src="images/client/1.jpg" alt="client image 1" />
-                        <div class="clear"></div>
-                        <div class="fa fa-circle mleft1"></div>
-                    </div>
-                    <div class="templatemo_clientimage">
-                        <p class="templatemo_clientdes">Nam auctor elementum dolor. Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
-                        <img src="images/client/2.jpg" alt="client image 2" /> 
-                        <div class="clear"></div>
-                        <div class="fa fa-circle mleft2"></div>				 
-                    </div>
-                    <div class="templatemo_clientimage">
-                        <p class="templatemo_clientdes">Quisque tincidunt risus et enim. Vestibulum gravida sem at sem bibendum vehicula. Sed et leo. </p>
-                        <img src="images/client/3.jpg" alt="client image 3" /> 		
-                        <div class="clear"></div>
-                        <div class="fa fa-circle mleft3"></div>		 
-                    </div>
-                    <div class="templatemo_clientimage next templatemo_marginleft50">
-                        <p class="templatemo_clientdes">Curabitur commodo arcu vel enim mollis consequat. Nulla pharetra tortor vel arcu. In rhoncus fermentum ipsum. </p>
-                        <img src="images/client/4.jpg" alt="client image 4" />
-                        <div class="clear"></div>
-                        <div class="fa fa-circle mleft4"></div>
-
-                    </div>
-                    <div class="templatemo_clientimage next">
-                        <p class="templatemo_clientdes">Nam auctor elementum dolor. Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus. </p>
-                        <img src="images/client/5.jpg" alt="client image 5" />
-                        <div class="clear"></div>
-                        <div class="fa fa-circle mleft5"></div>
-                    </div>
-
-                </div>
-                <div class="clear"></div>
-            </div>
-
-        </div>
-        <div class="clear"></div>
-        <!--Our Client End-->
-
+       
 
         <!--Contact Start -->
         <div class="templatemo_lightgrey" id="templatemo_contact">
@@ -583,42 +482,7 @@
 
         <!--Contact End-->
 
-        <!--Login Start -->
-        <div class="templatemo_lightgrey" id="templatemo_login">
-            <div class="templatemo_paracenter">
-                <h2>Inicio de Sesion</h2></div>
-            <div class="clear"></div>
-            <div class="container">
-                <div class="templatemo_paracenter">
-                    Pellentesque aliquam in risus eu ultrices. Suspendisse id interdum nibh. Etiam vel mattis augue, a vestibulum arcu. Nam rutrum diam dolor, eu vehicula nisl tincidunt non. Fusce tincidunt id justo eu tempor. Phasellus sit amet ante lobortis, mattis sapien id, dictum ipsum.
-                </div>
-                <div class="clear"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <form role="form" action="loginUsuario.jsp" method="post">
-                                        <div class="form-group">
-                                            <input name="nombreUsuario" type="text" class="form-control" id="fullname" placeholder="Nombre de Usuario" maxlength="30">
-                                        </div>
-                                        <div class="form-group">
-                                            <input name="subject" type="text" class="form-control" id="subject" placeholder="Your Subject" maxlength="40">
-                                        </div>
-                                        <div>
-                                            <input type="submit" class="btn btn-primary" value="Inicio Sesion">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Login End-->
-
+        
 
         <!--Footer Start-->
         <div class="templatemo_footer">
