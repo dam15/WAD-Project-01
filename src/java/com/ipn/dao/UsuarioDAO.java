@@ -35,6 +35,7 @@ public class UsuarioDAO {
                 transaction.rollback();
         }
     }
+    
     public void crearActualizarArchivo(Archivo archivo) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -49,6 +50,7 @@ public class UsuarioDAO {
                 transaction.rollback();
         }
     }
+    
     public void borrarUsuario(Usuario usuario) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -109,6 +111,7 @@ public class UsuarioDAO {
         }
         return resultados;
     }
+    
     public List allFiles(Usuario usuario) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -126,6 +129,7 @@ public class UsuarioDAO {
         }
         return resultados;
     }
+    
     public Archivo selectFile(Usuario usuario,Archivo archivo) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
