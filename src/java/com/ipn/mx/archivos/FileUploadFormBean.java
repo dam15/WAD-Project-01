@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.ipn.mx.ManagedBean;
+package com.ipn.mx.archivos;
 
 import java.io.File;
 import java.io.FileNotFoundException;

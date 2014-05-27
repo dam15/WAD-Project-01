@@ -4,6 +4,7 @@
     Author     : eric
 --%>
 
+<%@page import="com.ipn.mx.archivos.manipulacionArchivos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
@@ -182,8 +183,8 @@
     
     <!--Obtener Usuario-->
     <%
-        //String usuario = request.getParameter("");
-    String usuario = "Eric";
+        String usuario = request.getParameter("nombreUsuario");
+    //String usuario = "Eric";
     %>
     <!--Fin de Obtener Usuario-->
     
@@ -195,6 +196,8 @@
             <p>Tus archivos disponibles y faciles de compartir...</p>
             
             <%
+            manipulacionArchivos carpetausuario = new manipulacionArchivos();
+            carpetausuario.creaCarpetaUsuario(usuario);
             //consultas de todos los archivos
             %>
 
@@ -380,6 +383,7 @@
                 <h:panelGrid columns="2">
                 <h:outputLabel value="Cargar Archivo" for="fileUpload" />
                 <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" />
+                
                 <h:commandButton value="Subir"/>
                 </h:panelGrid>
                 </h:form>
