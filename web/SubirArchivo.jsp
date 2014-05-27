@@ -4,6 +4,7 @@
     Author     : eric
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="com.ipn.mx.archivos.manipulacionArchivos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -183,7 +184,7 @@
     
     <!--Obtener Usuario-->
     <%
-        String usuario = request.getParameter("nombreUsuario");
+        String usuario = request.getParameter("nombreUsuario"); 
     //String usuario = "Eric";
     %>
     <!--Fin de Obtener Usuario-->
@@ -197,7 +198,7 @@
             
             <%
             manipulacionArchivos carpetausuario = new manipulacionArchivos();
-            carpetausuario.creaCarpetaUsuario(usuario);
+            String urlUsuario = carpetausuario.creaCarpetaUsuario(usuario);
             //consultas de todos los archivos
             %>
 
@@ -373,17 +374,20 @@
         
         
         <div class="clear"></div>
+        
         <!--Our Blog Start y subir de archivos-->
         <div class="templatemo_blog" id="templatemo_blog">
             <h2>Bienvenido!!!</h2>
             <p>Tus archivos:</p>
             <div class="clear"></div>
             <div class="container">
+                
+                
                 <h:form enctype="multipart/form-data">
                 <h:panelGrid columns="2">
-                <h:outputLabel value="Cargar Archivo" for="fileUpload" />
-                <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" />
-                
+                <h:outputLabel value="Cargar Archivo" for="fileUpload" />               
+                <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" /> 
+                <input type="submit" name="Subir" value="Subir" class="btn btn-primary">
                 <h:commandButton value="Subir"/>
                 </h:panelGrid>
                 </h:form>
@@ -392,58 +396,6 @@
         </div>
         <!--Our Blog End-->
        
-
-        <!--Contact Start -->
-        <div class="templatemo_lightgrey" id="templatemo_contact">
-            <div class="templatemo_paracenter">
-                <h2>Contactanos</h2></div>
-            <div class="clear"></div>
-            <div class="container">
-                <div class="templatemo_paracenter">
-                    Si tienes alguna duda de nuestros servicios, o quieres utilizar AirPadlook para un negocio, puedes contactarnos
-                </div>
-                <div class="clear"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="templatemo_maps">
-                                <div class="fluid-wrapper">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12084.143170610365!2d-73.96770330299584!3d40.783227259584116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral+Park!5e0!3m2!1sen!2s!4v1391601567888"></iframe> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Nombre" maxlength="30">
-                                        </div>
-                                        <div class="form-group">
-                                            <input name="email" type="text" class="form-control" id="email" placeholder="Email" maxlength="30">
-                                        </div>
-                                        <div class="form-group">
-                                            <input name="subject" type="text" class="form-control" id="subject" placeholder="Asunto" maxlength="40">
-                                        </div>
-                                        <div><button type="button" class="btn btn-primary">Enviar Mensaje</button></div>
-                                    </form>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="txtarea">
-                                        <textarea name="message" rows="10" class="form-control" id="message"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Contact End-->
-
-        
-
         <!--Footer Start-->
         <div class="templatemo_footer">
             <div class="container">
@@ -733,37 +685,5 @@
     Free Template by templatemo
     http://www.templatemo.com
 -->
-            
-<div id="subir_archivo">
-           <h:form enctype="multipart/form-data">
-            <h:panelGrid columns="2">
-                <h:outputLabel value="Cargar Archivo" for="fileUpload" />
-                <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" />
-                <h:commandButton value="Subir"/>
-            </h:panelGrid>
-            
-             <h:panelGrid rendered="#{not empty(fileUploadFormBean.fileUpload)}" columns="2"  >
-                
-                <h:outputText value="fileName:" />
-                <h:outputText value="#{fileUploadFormBean.fileUpload.submittedFileName}" />
-                
-                <h:outputText value="contentType:" />
-                <h:outputText value="#{fileUploadFormBean.fileUpload.contentType}" />
-                
-                <h:outputText value="size:" />
-                <h:outputText value="#{fileUploadFormBean.fileUpload.size}" />
-                
-                <h:outputText value="Path:" />
-                <h:outputText value="#{fileUploadFormBean.fileUpload.inputStream}" />
-                
-                <h:outputText value="subido al servidor" />
-                <h:outputText value="#{fileUploadFormBean.uno()}" />
-                
-                
-                
-            </h:panelGrid>
-        </h:form>
-    </div>     
-        </body>
-    </html>
+  
 </f:view>

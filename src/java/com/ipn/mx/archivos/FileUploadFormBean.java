@@ -42,9 +42,6 @@ private String destino="/Users/eric/NetBeansProjects/WAD/WAD-Project-01/web/arch
     }
     
      public void uno() throws IOException{
-         
-        /*File directorio = new File(destino+"eric");
-        directorio.mkdir();*/
         copiarArchivo(fileUpload.getSubmittedFileName(), fileUpload.getInputStream());
         
     }
