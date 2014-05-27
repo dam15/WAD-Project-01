@@ -12,7 +12,7 @@
 -->
 <html>
   <head>
-    <title>Smoothy HTML5 Template</title>
+    <title><bean:message key="index.title"/></title>
     <meta name="keywords" content="smoothy, responsive bootstrap, one page, green, white, free html5 template, templatemo" />
 	<meta name="description" content="Smoothy is free HTML5 template for multi-purpose that is based on responsive bootstrap framework." />
     <meta charset="UTF-8">
@@ -82,7 +82,6 @@ ddsmoothmenu.init({
                                             <li><a class="menu" href="#templatemo_home">Inicio</a></li>
                                             <li><a class="menu" href="#templatemo_about">Sobre nosotros</a></li>
                                             <li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
-                                            <li><a class="menu" href="#templatemo_blog">Blog</a></li>
                                             <li><a class="menu" href="#templatemo_login1">registrarse</a></li>
                                             <li><a class="menu" href="#templatemo_login">Login</a></li>
                                         </ul>
@@ -95,10 +94,10 @@ ddsmoothmenu.init({
     </div>
     <div class="clear"></div>
     <!-- end menu -->
-      	<div  id="slider"  class="nivoSlider templatemo_slider">
-        	<a href="#"><img src="images/slider/img_1_blank.jpg" alt="slide 1" /></a>           	
-			<a href="#"><img src="images/slider/img_2_blank.jpg" alt="slide 2" /></a>  
-            <a href="#"><img src="images/slider/img_3_blank.jpg" alt="slide 3" /></a> 	        	
+      	<div id="slider" class="nivoSlider templatemo_slider">
+         <a href="#"><img src="images/slider/img_1_blank.jpg" alt="slide 1" /></a>
+<a href="#"><img src="images/slider/img_2_blank.jpg" alt="slide 2" /></a>
+            <a href="#"><img src="images/slider/img_3_blank.jpg" alt="slide 3" /></a> 
 	
     	</div>
              <div class="templatemo_caption">
@@ -358,91 +357,14 @@ ddsmoothmenu.init({
     </div>
     <!--Our Portfolio End-->
     <div class="clear"></div>
-    <!--Our Blog Start-->
-    <div class="templatemo_blog" id="templatemo_blog">
-    	<h2>Our blog</h2>
-        	<p>Check out our latest posts.</p>
-        <div class="clear"></div>
-        <div class="container">
-       		<div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<div class="templatemo_wrapperblogbox">
-                	<a href="#" class="fa fa-calendar tooltip1" title="28 January 2084"></a>
-                    <a href="#" class="fa fa-user tooltip2" title="Booker"></a>
-                    <a href="#" class="fa fa-tag tooltip3" title="HTML5, CSS3"></a>
-                    <a href="#" class="fa fa-comment tooltip4" title="Comments (4)"></a>
-                </div>
-                <div class="clear"></div>
-                <img src="images/templatemo_blogimage01.jpg" alt="blog image 1">
-                <div class="clear"></div>
-                <div class="templatemo_blogtext">
-                	<span class="left">New Touring</span>
-                    <span class="right">
-                    <a href="#" title="Click more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a>
-                    </span>
-                </div>
-        	</div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<div class="templatemo_wrapperblogbox">
-                	<a href="#" class="fa fa-calendar tooltip1" title="26 January 2084"></a>
-                    <a href="#" class="fa fa-user tooltip2" title="George"></a>
-                    <a href="#" class="fa fa-tag tooltip3" title="Template, Design"></a>
-                    <a href="#" class="fa fa-comment tooltip4" title="Comments (8)"></a>
-                </div>
-                <div class="clear"></div>
-                <img src="images/templatemo_blogimage02.jpg" alt="blog image 2">
-                <div class="clear"></div>
-                <div class="templatemo_blogtext">
-                	<span class="left">Coffee Shop</span>
-                    <span class="right">
-                    <a href="#" title="Click more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a>
-                    </span>
-                </div>
-        	</div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12 templatemo_margintop10">
-            	<div class="templatemo_wrapperblogbox">
-                	<a href="#" class="fa fa-calendar tooltip1" title="24 January 2084"></a>
-                    <a href="#" class="fa fa-user tooltip2" title="Jelly Bean"></a>
-                    <a href="#" class="fa fa-tag tooltip3" title="Web Design, Portfolio"></a>
-                    <a href="#" class="fa fa-comment tooltip4" title="Comments (16)"></a>
-                </div>
-                <div class="clear"></div>
-                <img src="images/templatemo_blogimage03.jpg" alt="blog image 3">
-                <div class="clear"></div>
-                <div class="templatemo_blogtext">
-                	<span class="left">Tea Time</span>
-                    <span class="right">
-                    <a href="#" title="Click more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a>
-                    </span>
-                </div>
-        	</div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12 templatemo_margintop10">
-            	<div class="templatemo_wrapperblogbox">
-                	<a href="#" class="fa fa-calendar tooltip1" title="22 January 2084"></a>
-                    <a href="#" class="fa fa-user tooltip2" title="John Walker"></a>
-                    <a href="#" class="fa fa-tag tooltip3" title="Logo, Creative"></a>
-                    <a href="#" class="fa fa-comment tooltip4" title="Comments (32)"></a>
-                </div>
-                <div class="clear"></div>
-                <img src="images/templatemo_blogimage04.jpg" alt="blog image 4">
-                <div class="clear"></div>
-                <div class="templatemo_blogtext">
-                	<span class="left">Mobile First</span>
-                    <span class="right">
-                    <a href="#" title="Click more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a>
-                    </span>
-                </div>
-        	</div>
-        </div>
-    </div>
-    <!--Our Blog End-->
-	<!--Our Partner Start-->
+    <!--Our Partner Start-->
     <div class="section6 templatemo_partner" id="templatemo_partners">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="secHeader">
-              <h2 class="text-center">Our partners</h2>
-              <p class="text-center">Etiam faucibus turpis id ipsum egestas porta. Cras in aliquet purus, ac varius turpis.</p>
+              <h2 class="text-center">Nuestros patrocinadores</h2>
+              <p class="text-center">Proyecto de WAD, elaborado usando las siguientes herramientas</p>
             </div>
           </div>
         </div>
@@ -456,14 +378,11 @@ ddsmoothmenu.init({
             data-cycle-prev="#prev"
             data-cycle-carousel-fluid=true
             >
-            <img alt="partner 1" src="images/partners/partner1.jpg" >
-            <img alt="partner 2" src="images/partners/partner2.jpg" >
-            <img alt="partner 3" src="images/partners/partner3.jpg" >
-            <img alt="partner 4" src="images/partners/partner4.jpg" >
-            <img alt="partner 5" src="images/partners/partner5.jpg" >
-            <img alt="partner 6" src="images/partners/partner6.jpg" >
-            <img alt="partner 7" src="images/partners/partner7.jpg" >
-            <img alt="partner 8" src="images/partners/partner8.jpg" >
+            <img alt="partner 1" src="images/partners/Struts_logo.gif" >
+            <img alt="partner 2" src="images/partners/glassfish_logo.png" >
+            <img alt="partner 3" src="images/partners/hibernate-logo.png" >
+            <img alt="partner 4" src="images/partners/java-logo2.jpg" >
+            <img alt="partner 5" src="images/partners/netbeans-logo.gif" >
         </div>
         <a href="#" id="prev">&lt;&lt; Prev </a>
         <a href="#" id="next"> Next &gt;&gt; </a>
@@ -532,7 +451,7 @@ ddsmoothmenu.init({
           <div class="container">
         <div class="row">
           <div class="col-md-3">
-              <form role="form" action="Welcome.do" method="post">
+             <form role="form" action="Welcome.do" method="post">
               <div class="form-group">
                   <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" maxlength="40">
               </div>
