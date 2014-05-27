@@ -6,6 +6,8 @@
 
 package com.ipn.controller;
 
+import com.ipn.Session.ManejadorSesiones;
+import com.ipn.entidades.Usuario;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -37,9 +39,13 @@ public class LoginAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         //extract user data
+        ManejadorSesiones sesion=new ManejadorSesiones();
+        Usuario u= new Usuario();
+        u.setNombre("YISUS");
         LoginForm formBean=(LoginForm)form;
         String username=formBean.getNombreUsuario();
         String password=formBean.getClaveUsuario();
+        sesion.createSession(request, response, u);
         
         //perform validation
         if((username==null) ||                          //name parameter does not exist

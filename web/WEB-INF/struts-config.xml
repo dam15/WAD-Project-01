@@ -22,7 +22,7 @@
 
     <action-mappings>
         <action name="LoginForm" path="/login" scope="request" type="com.ipn.controller.LoginAction" validate="false">
-        <forward name="success" path="/SubirArchivo.jsp"/>
+        <forward name="success" path="/welcomeStruts.jsp"/>
         <forward name="failure" path="/index.jsp"/>
         </action>
     </action-mappings>

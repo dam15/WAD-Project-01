@@ -21,6 +21,8 @@ import org.hibernate.Transaction;
  */
 public class UsuarioDAO {
     
+    private final String LOGIN="FROM Usuario u WHERE u.nombreUsuario= :username AND u.claveUsuario= :password";
+    
     public void crearActualizarUsuario(Usuario usuario) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -112,6 +114,25 @@ public class UsuarioDAO {
         return resultados;
     }
     
+    public Usuario login(String username,String password) throws HibernateException
+    {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.getTransaction();
+        Usuario u=null;
+        try{
+            transaction.begin();
+                Query q=session.createQuery(LOGIN);
+                q.setParameter("username",username);
+                q.setParameter("pasword",password);
+                u=(Usuario) q.uniqueResult();
+            transaction.commit();
+        }catch (HibernateException e) {
+            if(transaction != null && transaction.isActive())
+                transaction.rollback();
+        }
+        return u;
+    }
+    
     public List allFiles(Usuario usuario) throws Exception
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -121,7 +142,7 @@ public class UsuarioDAO {
             // Empieza la transaccion, guarda o actualiza al usuario 
             transaction.begin();
                 usuario=(Usuario)session.get(Usuario.class, usuario.getIdusuario());
-                resultados=(List) usuario.getArchivos();
+                //resultados=(List) usuario.getArchivos();
             transaction.commit();
         } catch (HibernateException e) {
             if(transaction != null && transaction.isActive())
@@ -150,5 +171,16 @@ public class UsuarioDAO {
         return null;
     }
     
-    
+    public static void main(String[] args) {
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario p= new Usuario();
+        p.setIdusuario(1);
+        Usuario u=null;
+        try{
+            //u=dao.select(p);
+            u=dao.login("dam","dam");
+        }catch(HibernateException e){e.printStackTrace();}
+        System.out.println("transaccion finalizada");
+        System.out.println(u.toString());
+    }
 }

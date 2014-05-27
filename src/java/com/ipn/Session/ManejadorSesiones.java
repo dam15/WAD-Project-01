@@ -46,6 +46,12 @@ public class ManejadorSesiones {
         }
     }
     
+    public String getNombre(HttpServletRequest request)
+    {
+        HttpSession s=request.getSession(true);
+        return (String)s.getAttribute(NOMBRE);
+    }
+    
     public boolean isSession(HttpServletRequest request)
     {
         HttpSession s=request.getSession(false);

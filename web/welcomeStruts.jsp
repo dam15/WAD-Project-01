@@ -1,3 +1,4 @@
+<%@page import="com.ipn.Session.ManejadorSesiones"%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 
@@ -10,6 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><bean:message key="debug.title"/></title>
         <html:base/>
+        <%
+            ManejadorSesiones sesion=new ManejadorSesiones();
+            String nombre=sesion.getNombre(request);
+        %>
     </head>
     <body style="background-color: white">
         
@@ -22,6 +27,7 @@
         
         <h3><bean:message key="welcome.heading"/></h3>
         <p><bean:message key="welcome.message"/></p>
+        <%=nombre%>
         
     </body>
 </html:html>
