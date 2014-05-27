@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="LoginForm" type="com.ipn.controller.LoginForm"/>
     
     </form-beans>
     
@@ -15,11 +16,15 @@
     </global-exceptions>
 
     <global-forwards>
+        <forward name="failure" path="/index.jsp"/>
         <forward name="welcome"  path="/Welcome.do"/>
     </global-forwards>
 
     <action-mappings>
-        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action name="LoginForm" path="/login" scope="request" type="com.ipn.controller.LoginAction" validate="false">
+        <forward name="success" path="/SubirArchivo.jsp"/>
+        <forward name="failure" path="/index.jsp"/>
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

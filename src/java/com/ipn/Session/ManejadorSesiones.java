@@ -34,7 +34,7 @@ public class ManejadorSesiones {
         s.setAttribute(TIPO, u.getTipoUsuario());
     }
     
-    public void removeSession(HttpServletRequest request,HttpServletResponse response)
+    public void removeSession(HttpServletRequest request)
     {
         HttpSession s=request.getSession(true);
         s.removeAttribute(ID);
