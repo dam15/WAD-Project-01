@@ -164,22 +164,15 @@ ddsmoothmenu.init({
     </div>
 
     <div class="clear"></div>
-    <div class="templatemo_reasonbg">
-    	<h2>Razones para elegir AirPadlook</h2>
-       		<p>No hay limite de carga!!!</p>
-            <div class="clear height10"></div>
-	        <div class="fa fa-bell-o"></div>
-            <div class="fa fa-tablet"></div>
-            <div class="fa fa-lock"></div>
-			<div class="clear height20"></div>
-            <a class="btn btn-large btn-primary" href="#">Read More</a>
-    </div>
     <div class="clear"></div>
     
     
     <!--Our Portfolio Start-->
     <div class="templatemo_portfolio" id="templatemo_portfolio">
-        	<h2>Nuestro portafolio</h2>
+        <%
+        String nombreUsuario = request.getParameter("nombreUsuario");
+        %>
+        <h2>Bienvenido <%=nombreUsuario%></h2>
             <p>Tus archivos disponibles y faciles de compartir...</p>
            	
             <div class="container">
@@ -458,7 +451,7 @@ ddsmoothmenu.init({
     <div class="templatemo_bottom">
     	<div class="container">
         	<div class="row">
-            	<div class="left">Copyright © 2084 <a href="#">Your Company Name</a> - <a href="#">HTML5 Template</a> by <a href="http://www.templatemo.com/preview/templatemo_396_smoothy">Smoothy</a></div>
+            	<div class="left">Copyright © 2014 <a href="#">Your Company Name</a> - <a href="#">HTML5 Template</a> by <a href="http://www.templatemo.com/preview/templatemo_396_smoothy">Smoothy</a></div>
                 <div class="right">
                 	<a href="#"><div class="fa fa-rss soc"></div></a>
                     <a href="#"><div class="fa fa-twitter soc"></div></a>
