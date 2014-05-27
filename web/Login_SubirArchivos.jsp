@@ -11,7 +11,7 @@
 <f:view>
 <html>
   <head>
-    <title><bean:message key="index.title"/></title>
+    <title>AirPadlook</title>
     <meta name="keywords" content="smoothy, responsive bootstrap, one page, green, white, free html5 template, templatemo" />
 	<meta name="description" content="Smoothy is free HTML5 template for multi-purpose that is based on responsive bootstrap framework." />
     <meta charset="UTF-8">
@@ -354,52 +354,39 @@ ddsmoothmenu.init({
     
     
     <div class="clear"></div>
-    <!--Our Partner Start-->
-    <div class="section6 templatemo_partner" id="templatemo_partners">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="secHeader">
-              <h2 class="text-center">Nuestros patrocinadores</h2>
-              <p class="text-center">Proyecto de WAD, elaborado usando las siguientes herramientas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="partnerWrap">
-        <div class="slideshow" 
-            data-cycle-fx=carousel
-            data-cycle-timeout=0
-            data-cycle-carousel-visible=4
-            data-cycle-next="#next"
-            data-cycle-prev="#prev"
-            data-cycle-carousel-fluid=true
-            >
-            <img alt="partner 1" src="images/partners/Struts_logo.gif" >
-            <img alt="partner 2" src="images/partners/glassfish_logo.png" >
-            <img alt="partner 3" src="images/partners/hibernate-logo.png" >
-            <img alt="partner 4" src="images/partners/java-logo2.jpg" >
-            <img alt="partner 5" src="images/partners/netbeans-logo.gif" >
-        </div>
-        <a href="#" id="prev">&lt;&lt; Prev </a>
-        <a href="#" id="next"> Next &gt;&gt; </a>
-      </div>
-
-    </div>
+    
     <!--Our Partner End-->
     
     <!--Our Client Start-->
     <div class="templatemo_reasonbg" id="subirarchivos">
     	<h2>Sube tus archivos</h2>
+        <br>
         <div class="container">
         	<div class="col-xs-11 templatemo_col12 templatemo_clientwrapper">
                     
                      <h:form enctype="multipart/form-data">
                 <h:panelGrid columns="2">
-                <h:outputLabel value="Cargar Archivo" for="fileUpload" />               
+               
                 <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" /> 
                 <input type="submit" name="Subir" value="Subir" class="btn btn-primary">
-                <h:commandButton value="Subir"/>
+                </h:panelGrid>
+                <br>
+                <h:panelGrid rendered="#{not empty(fileUploadFormBean.fileUpload)}" columns="2"  >
+                
+                <h:outputText value="fileName:" />
+                <h:outputText value="#{fileUploadFormBean.fileUpload.submittedFileName}" />
+                
+                <h:outputText value="contentType:" />
+                <h:outputText value="#{fileUploadFormBean.fileUpload.contentType}" />
+                
+                <h:outputText value="size:" />
+                <h:outputText value="#{fileUploadFormBean.fileUpload.size}" />
+                
+                <h:outputText value="Path:" />
+                <h:outputText value="#{fileUploadFormBean.fileUpload.headerNames}" />
+                
+                <h:outputText value="Se ha cargado correctamente!!!" />
+                <h:outputText value="#{fileUploadFormBean.uno()}" />
                 </h:panelGrid>
                 </h:form>
                     

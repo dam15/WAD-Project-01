@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="FileUploadFormBean" type="com.ipn.mx.archivos.FileUploadFormBean"/>
     
     </form-beans>
     
