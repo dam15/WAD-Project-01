@@ -1,3 +1,4 @@
+<%@page import="com.ipn.Session.ManejadorSesiones"%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 
@@ -62,6 +63,13 @@ ddsmoothmenu.init({
 
 </script>
 
+
+    <%
+        ManejadorSesiones sesion= new ManejadorSesiones();
+        if(sesion.isSession(request)==true)
+        {sesion.removeSession(request);}
+    %>
+
   </head>
   <body>
     <header>
@@ -72,7 +80,7 @@ ddsmoothmenu.init({
         <div class="row">
           <div class="col-sm-3 col-md-3">
             <div class="logo">
-              <a rel="nofollow" href="http://www.templatemo.com/preview/templatemo_396_smoothy"><img src="images/templatemo_logo.png" alt="logo"></a>
+              <a rel="nofollow" href="#"><img src="images/templatemo_logo.png" alt="logo"></a>
             </div>
           </div>
           <div class="col-sm-9 col-md-9 templatemo_col9">
@@ -95,7 +103,7 @@ ddsmoothmenu.init({
     <div class="clear"></div>
     <!-- end menu -->
       	<div id="slider" class="nivoSlider templatemo_slider">
-         <a href="#"><img src="images/slider/img_1_blank.jpg" alt="slide 1" /></a>
+         <a href="#"><img src="images/slider/img_1_blank_1.jpg" alt="slide 1" /></a>
 <a href="#"><img src="images/slider/img_2_blank.jpg" alt="slide 2" /></a>
             <a href="#"><img src="images/slider/img_3_blank.jpg" alt="slide 3" /></a> 
 	
@@ -179,7 +187,7 @@ ddsmoothmenu.init({
             <div class="fa fa-tablet"></div>
             <div class="fa fa-lock"></div>
 			<div class="clear height20"></div>
-            <a class="btn btn-large btn-primary" href="#">Read More</a>
+            <a class="btn btn-large btn-primary" href="#">Conozca más</a>
     </div>
     <div class="clear"></div>
     <!--Our Portfolio Start-->
@@ -451,7 +459,11 @@ ddsmoothmenu.init({
           <div class="container">
         <div class="row">
           <div class="col-md-3">
-             <form role="form" action="Welcome.do" method="post">
+              
+              
+            
+              
+            <form role="form" action="Welcome.do" method="post">
               <div class="form-group">
                   <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" maxlength="40">
               </div>
@@ -487,11 +499,11 @@ ddsmoothmenu.init({
     <!--Login Start -->
     <div class="templatemo_lightgrey" id="templatemo_login">
     	<div class="templatemo_paracenter">
-    	<h2>Inicio de Sesion</h2></div>
+            <h2><bean:message key="index.sesion.title"/></h2></div>
         <div class="clear"></div>
         <div class="container">
         	<div class="templatemo_paracenter">
-            Pellentesque aliquam in risus eu ultrices. Suspendisse id interdum nibh. Etiam vel mattis augue, a vestibulum arcu. Nam rutrum diam dolor, eu vehicula nisl tincidunt non. Fusce tincidunt id justo eu tempor. Phasellus sit amet ante lobortis, mattis sapien id, dictum ipsum.
+            <bean:message key="index.sesion.mensaje"/>
             </div>
             <div class="clear"></div>
             <div class="container">
@@ -499,17 +511,32 @@ ddsmoothmenu.init({
           <div class="container">
         <div class="row">
           <div class="col-md-3">
-              <form role="form" action="SubirArchivo.jsp" method="POST">
-              <div class="form-group">
-                <input name="nombreUsuario" type="text" class="form-control" id="fullname" placeholder="Nombre de Usuario" maxlength="30">
-              </div>
-              <div class="form-group">
-                <input name="password" type="text" class="form-control" id="subject" placeholder="Contraseña" maxlength="40">
-              </div>
-              <div>
-                  <input type="submit" class="btn btn-primary" value="Inicio Sesion">
-              </div>
-            </form>
+              
+              <html:form action="/login" method="post" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <bean:write name="LoginForm" property="error" filter="false"/>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.sesion.username"/></td>
+                        <td><html:text property="nombreUsuario" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.sesion.claveusuario"/></td>
+                        <td><html:password property="claveUsuario" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><html:submit value="Ingresar" styleClass="btn btn-primary"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form> 
+              
           </div>
         </div>
       </div>
@@ -519,66 +546,12 @@ ddsmoothmenu.init({
   </div>
     
     <!--Login End-->
-    
-    
-    <!--Footer Start-->
-    <div class="templatemo_footer">
-    	<div class="container">
-       	  <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<h2>About Smoothy</h2>
-                <p>Etiam faucibus turpis id ipsum egestas porta. Cras in aliquet purus, ac varius turpis. Proin nibh mauris, lacinia at tincidunt egestas, tincidunt eleifend urna. Aliquam erat volutpat.</p>
-          </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<h2>Services</h2>
-                <ul>
-                  <li>Integer condimentum</li>
-                  <li>Quisque eget mi felis</li>
-                  <li>Mauris placerat lacinia</li>
-                  <li>Cras molestie imperdiet</li>
-                  <li>Duis vel consectetur</li>
-                </ul>
-                <div class="clear"></div>
-                <div class="templatemo_morelink"><a href="#">and more... </a></div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<h2>Flicker</h2>
-					<div id="templatemo_flicker" >
-          <ul class="nobullet footer_gallery">
-                <li><a href="images/flicker/1.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s1.jpg" alt="image 1" /></a></li>
-                <li><a href="images/flicker/2.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s2.jpg" alt="image 2" /></a></li>
-                <li><a href="images/flicker/3.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s3.jpg" alt="image 3" /></a></li>
-                <li><a href="images/flicker/4.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s4.jpg" alt="image 4" /></a></li>
-                <li><a href="images/flicker/5.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s5.jpg" alt="image 5" /></a></li>
-          	    <li><a href="images/flicker/6.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s6.jpg" alt="image 6" /></a></li>
-                <li><a href="images/flicker/7.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s7.jpg" alt="image 7" /></a></li>
-                <li><a href="images/flicker/8.jpg" data-rel="lightbox[gallery]"><img src="images/flicker/s8.jpg" alt="image 8" /></a></li>
-            </ul>
-            <br style="clear: left" />
-        </div>
-          </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            <h2>Contact</h2>
-            	<span class="left col-xs-1 fa fa-map-marker"></span>
-                <span class="right col-xs-11">120-240 Nam bibendum consectetur diam et fringilla</span>
-                <div class="clear height10"></div>
-                <span class="left col-xs-1 fa fa-phone"></span>
-                <span class="right col-xs-11">010-020-0680</span>
-                <div class="clear height10"></div>
-                <span class="left col-xs-1 fa fa-envelope"></span>
-                <span class="right col-xs-11">contact@company.com</span>
-                <div class="clear height10"></div>
-                <span class="left col-xs-1 fa fa-globe"></span>
-                <span class="right col-xs-11">www.templatemo.com</span>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-   <!--Footer End-->
+   
 	<!-- Bottom Start -->
     <div class="templatemo_bottom">
     	<div class="container">
         	<div class="row">
-            	<div class="left">Copyright © 2084 <a href="#">Your Company Name</a> - <a href="#">HTML5 Template</a> by <a href="http://www.templatemo.com/preview/templatemo_396_smoothy">Smoothy</a></div>
+                    <div class="left">Copyright © 2014 <a href="#"><bean:message key="index.company"/></a>by <a href="#"><bean:message key="index.about"/></a></div>
                 <div class="right">
                 	<a href="#"><div class="fa fa-rss soc"></div></a>
                     <a href="#"><div class="fa fa-twitter soc"></div></a>
