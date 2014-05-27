@@ -499,12 +499,12 @@ ddsmoothmenu.init({
           <div class="container">
         <div class="row">
           <div class="col-md-3">
-              <form role="form" action="SubirArchivo.jsp" method="POST">
+              <form role="form" action="Welcome.do" method="post">
               <div class="form-group">
                 <input name="nombreUsuario" type="text" class="form-control" id="fullname" placeholder="Nombre de Usuario" maxlength="30">
               </div>
               <div class="form-group">
-                <input name="password" type="text" class="form-control" id="subject" placeholder="Contraseña" maxlength="40">
+                <input name="subject" type="text" class="form-control" id="subject" placeholder="Your Subject" maxlength="40">
               </div>
               <div>
                   <input type="submit" class="btn btn-primary" value="Inicio Sesion">
