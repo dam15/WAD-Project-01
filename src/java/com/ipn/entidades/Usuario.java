@@ -11,6 +11,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -21,6 +23,13 @@ import javax.persistence.Table;
 @Table(name="usuario"
     ,catalog="wad_proyecto"
 )
+@NamedNativeQueries({
+    @NamedNativeQuery(
+            name="userLoginU",
+            query="call userLogin(:username,:pass)",
+            resultClass = Usuario.class
+    )
+})
 public class Usuario  implements java.io.Serializable {
 
      private Integer idusuario;

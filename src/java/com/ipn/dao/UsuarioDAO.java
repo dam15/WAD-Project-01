@@ -21,7 +21,7 @@ import org.hibernate.Transaction;
  */
 public class UsuarioDAO {
     
-    private final String LOGIN="FROM Usuario u WHERE u.nombreUsuario= :username AND u.claveUsuario= :password";
+    private final String LOGIN="FROM Usuario u WHERE u.nombreUsuario =:username AND u.claveUsuario =password";
     
     public void crearActualizarUsuario(Usuario usuario) throws Exception
     {
@@ -121,10 +121,20 @@ public class UsuarioDAO {
         Usuario u=null;
         try{
             transaction.begin();
-                Query q=session.createQuery(LOGIN);
+                Query q=session.getNamedQuery("userLoginU");
                 q.setParameter("username",username);
-                q.setParameter("pasword",password);
+                q.setParameter("pass",password);
+                
                 u=(Usuario) q.uniqueResult();
+                System.out.println(u);
+                List l=q.list();
+                if(l.size()>0)
+                {
+                    u=(Usuario)l.get(0);
+                }else
+                {
+                    return null;
+                }
             transaction.commit();
         }catch (HibernateException e) {
             if(transaction != null && transaction.isActive())
@@ -171,16 +181,19 @@ public class UsuarioDAO {
         return null;
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario p= new Usuario();
         p.setIdusuario(1);
         Usuario u=null;
+        List l=null;
         try{
             //u=dao.select(p);
             u=dao.login("dam","dam");
-        }catch(HibernateException e){e.printStackTrace();}
+            //l=dao.selectAll();
+        }catch(HibernateException e){}
         System.out.println("transaccion finalizada");
-        System.out.println(u.toString());
+        if(u==null)System.out.println("Esta vacio");
+        else System.out.println(l);
     }
 }
