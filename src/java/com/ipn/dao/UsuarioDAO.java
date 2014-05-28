@@ -124,17 +124,8 @@ public class UsuarioDAO {
                 Query q=session.getNamedQuery("userLoginU");
                 q.setParameter("username",username);
                 q.setParameter("pass",password);
-                
+                // Obtener el usuario que ha ingresado su sesion
                 u=(Usuario) q.uniqueResult();
-                System.out.println(u);
-                List l=q.list();
-                if(l.size()>0)
-                {
-                    u=(Usuario)l.get(0);
-                }else
-                {
-                    return null;
-                }
             transaction.commit();
         }catch (HibernateException e) {
             if(transaction != null && transaction.isActive())
@@ -192,8 +183,10 @@ public class UsuarioDAO {
             u=dao.login("dam","dam");
             //l=dao.selectAll();
         }catch(HibernateException e){}
-        System.out.println("transaccion finalizada");
+        System.out.println("Transaccion finalizada...");
+        /*
         if(u==null)System.out.println("Esta vacio");
-        else System.out.println(l);
+        else System.out.println(u);
+        */
     }
 }

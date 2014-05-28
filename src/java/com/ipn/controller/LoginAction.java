@@ -7,12 +7,14 @@
 package com.ipn.controller;
 
 import com.ipn.Session.ManejadorSesiones;
+import com.ipn.dao.UsuarioDAO;
 import com.ipn.entidades.Usuario;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.hibernate.HibernateException;
 
 /**
  *
@@ -39,14 +41,12 @@ public class LoginAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         //extract user data
-        ManejadorSesiones sesion=new ManejadorSesiones();
-        Usuario u= new Usuario();
-        u.setNombre("YISUS");
         LoginForm formBean=(LoginForm)form;
         String username=formBean.getNombreUsuario();
         String password=formBean.getClaveUsuario();
-        sesion.createSession(request, response, u);
-        
+        ManejadorSesiones sesion=new ManejadorSesiones();
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario u= null;
         //perform validation
         if((username==null) ||                          //name parameter does not exist
              password==null ||                          //email parameter does not exist
@@ -56,7 +56,15 @@ public class LoginAction extends org.apache.struts.action.Action {
             formBean.setError();
             return mapping.findForward(FAILURE);
         }
-        return mapping.findForward(SUCCESS);
-
+        try{
+            u=dao.login(username, password);
+        }catch(HibernateException e){e.printStackTrace();}
+        if(u!=null)
+        {
+            sesion.createSession(request, response, u);
+            return mapping.findForward(SUCCESS);
+        }
+        else 
+            return mapping.findForward(FAILURE);
     }
 }

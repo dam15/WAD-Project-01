@@ -3,6 +3,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="com.ipn.mx.archivos.manipulacionArchivos"%>
+<%@page import="com.ipn.Session.ManejadorSesiones"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
@@ -61,6 +62,15 @@ ddsmoothmenu.init({
 
 </script>
 
+
+    <%
+            ManejadorSesiones sesion = new ManejadorSesiones();
+            String nombreUsuario="";
+            try{
+            nombreUsuario=sesion.getNombre(request);
+            }catch(Exception e){e.printStackTrace();}
+    %>
+    
   </head>
   <body>
     <header>
@@ -169,9 +179,7 @@ ddsmoothmenu.init({
     
     <!--Our Portfolio Start-->
     <div class="templatemo_portfolio" id="templatemo_portfolio">
-        <%
-        String nombreUsuario = request.getParameter("nombreUsuario");
-        %>
+        
         <h2>Bienvenido <%=nombreUsuario%></h2>
             <p>Tus archivos disponibles y faciles de compartir...</p>
            	
