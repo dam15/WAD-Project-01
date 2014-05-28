@@ -1,3 +1,4 @@
+
 <%--
     Document : SubirArchivo
     Created on : 17-may-2014, 23:40:11
@@ -24,9 +25,9 @@
             
             
             <!DOCTYPE html>
-<!--
-Free Responsive Template by templatemo
-http://www.templatemo.com
+<!-- 
+    Free Responsive Template by templatemo
+    http://www.templatemo.com
 -->
 <html>
     <head>
@@ -44,27 +45,28 @@ http://www.templatemo.com
         <link href="css/circle.css" rel="stylesheet">
         <link href="css/jquery.bxslider.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/nivo-slider.css">
-        <link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/JavaScript" src="js/slimbox2.js"></script>
+        <script type="text/JavaScript" src="js/slimbox2.js"></script> 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
         <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
 
         <!--/***********************************************
-* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-* This notice MUST stay intact for legal use
-* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-***********************************************/
--->
+        * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+        * This notice MUST stay intact for legal use
+        * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+        ***********************************************/
+        
+        -->
 
 
         <script type="text/javascript">
@@ -98,9 +100,9 @@ http://www.templatemo.com
                                         <ul class="nav">
                                             <li><a class="menu" href="#muestraArchivos">Archivos</a></li>
                                             <!--
-<li><a class="menu" href="#templatemo_about">Sobre nosotros</a></li>
-<li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
--->
+                                            <li><a class="menu" href="#templatemo_about">Sobre nosotros</a></li>
+                                            <li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
+                                            -->
                                             <li><a class="menu" href="#templatemo_blog">Subir Archivo</a></li>
                                             <li><a class="menu" href="perfil.jsp">Mi perfil</a></li>
                                             <li><a class="menu" href="index.html">Logout</a></li>
@@ -125,14 +127,14 @@ http://www.templatemo.com
                         <div class="templatemo_about_box">
                             <div class="square_coner">
                                 <span class="texts-a"><i class="fa fa-bell-o"></i></span>
-                            </div>
+                            </div>                          
                             Diseño de interfaz interactivo</div>
                         <div class="col-xs-12 col-sm-6 col-md-3 hover-box" >
-                            <div class="inner-hover-box">	
+                            <div class="inner-hover-box">								
                                 <p>La interfaz esta diseñada para ser amigable con los usuarios, ademas de facilitar de manera considerable el almacenamiento y administracion de archivos.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 	
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
                     <div class="item project-post">
@@ -142,11 +144,11 @@ http://www.templatemo.com
                             </div>
                             Notificaciones directas</div>
                         <div class="col-xs-6 col-sm-6 col-md-3 hover-box" >
-                            <div class="inner-hover-box">	
+                            <div class="inner-hover-box">								
                                 <p>Envio de notificaciones a tu correo electronico para informar sobre algun problema, aviso importante o promocion disponible</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 	
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12 templatemo_margintop10">
                     <div class="item project-post">
@@ -156,11 +158,11 @@ http://www.templatemo.com
                             </div>
                             Seguridad Web</div>
                         <div class="col-xs-6 col-sm-6 col-md-3 hover-box" >
-                            <div class="inner-hover-box">	
+                            <div class="inner-hover-box">								
                                 <p>Tus archivos nunca pudieron estar mas seguros. Solo tu tendras acceso a ellos, a no ser que desees compartirlos con algun conocido.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 	
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12 templatemo_margintop10">
                     <div class="item project-post">
@@ -170,11 +172,11 @@ http://www.templatemo.com
                             </div>
                             Servicio Rapido</div>
                         <div class="col-xs-6 col-sm-6 col-md-3 hover-box" >
-                            <div class="inner-hover-box">	
+                            <div class="inner-hover-box">								
                                 <p>Solo necesitas iniciar sesion, y listo!!!... Tus archivos estaran disponibles a cualquier hora.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 	
                 </div>
             </div>
         </div>
@@ -202,7 +204,7 @@ http://www.templatemo.com
             %>
 
             <div class="container">
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/1.jpg" alt="portfolio 1">
@@ -222,7 +224,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/2.jpg" alt="portfolio 2">
@@ -242,7 +244,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/3.jpg" alt="portfolio 3">
@@ -262,7 +264,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/4.jpg" alt="portfolio 4">
@@ -285,7 +287,7 @@ http://www.templatemo.com
             </div>
             <div class="clear"></div>
             <div class="container">
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/5.jpg" alt="portfolio 5">
@@ -305,7 +307,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/6.jpg" alt="portfolio 6">
@@ -325,7 +327,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/7.jpg" alt="portfolio 7">
@@ -345,7 +347,7 @@ http://www.templatemo.com
                     </div>
 
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
+                <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">              
                     <div class="portfolio-item">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/8.jpg" alt="portfolio 8">
@@ -583,18 +585,18 @@ http://www.templatemo.com
         </script>
         <script type="text/javascript">
             <!--
-function toggle_visibility(id) {
-var e = document.getElementById(id);
-if (e.style.display == 'block') {
-e.style.display = 'none';
-$('#togg').text('show footer');
-}
-else {
-e.style.display = 'block';
-$('#togg').text('hide footer');
-}
-}
-//-->
+            function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if (e.style.display == 'block') {
+                    e.style.display = 'none';
+                    $('#togg').text('show footer');
+                }
+                else {
+                    e.style.display = 'block';
+                    $('#togg').text('hide footer');
+                }
+            }
+            //-->
         </script>
         <script type="text/javascript" src="js/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
@@ -675,14 +677,15 @@ $('#togg').text('hide footer');
                     menuItems
                     .parent().removeClass("active")
                     .end().filter("[href=#" + id + "]").parent().addClass("active");
-     }
+     }                   
   });
         </script>
     </body>
 </html>
-<!--
-Free Template by templatemo
-http://www.templatemo.com
+<!-- 
+    Free Template by templatemo
+    http://www.templatemo.com
 -->
   
 </f:view>
+

@@ -9,8 +9,6 @@
     <form-beans>
         <form-bean name="LoginForm" type="com.ipn.controller.LoginForm"/>
         <form-bean name="FileUploadFormBean" type="com.ipn.mx.archivos.FileUploadFormBean"/>
-
-    
     </form-beans>
     
     <global-exceptions>
