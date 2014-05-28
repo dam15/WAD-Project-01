@@ -27,7 +27,7 @@
         <forward name="failure" path="/index.jsp"/>
         </action>
         <action name="RegistroForm" path="/registro" scope="request" type="com.ipn.controller.RegistroAction" validate="false">
-            <forward name="success" path="/welcomeStruts.jsp"/>
+            <forward name="success" path="/confirmaRegistro.jsp"/>
             <forward name="failure" path="/index.jsp"/>
         </action>
     </action-mappings>
