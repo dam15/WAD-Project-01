@@ -114,7 +114,7 @@ ddsmoothmenu.init({
                     <h1>Espacio de Almacenamiento Ilimitado</h1>
                     <div class="clear"></div>
              		<p>AirPadlook es un centro de almacenamiento en linea donde puedes guardar todo tipo de archivos de manera segura rapida y siempre al alcance de tu mano</p>
-	          	    <a class="btn btn-large btn-primary" href="#">Read More</a>
+	          	    <a class="btn btn-large btn-primary" href="#templatemo_login1">Conozca más</a>
               </div>  
   </header>
   	<div class="templatemo_lightgrey_about" id="templatemo_about">
@@ -187,7 +187,7 @@ ddsmoothmenu.init({
             <div class="fa fa-tablet"></div>
             <div class="fa fa-lock"></div>
 			<div class="clear height20"></div>
-            <a class="btn btn-large btn-primary" href="#">Conozca más</a>
+            <a class="btn btn-large btn-primary" href="#templatemo_login1">Conozca más</a>
     </div>
     <div class="clear"></div>
     <!--Our Portfolio Start-->

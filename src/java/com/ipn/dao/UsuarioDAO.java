@@ -23,7 +23,7 @@ public class UsuarioDAO {
     
     private final String LOGIN="FROM Usuario u WHERE u.nombreUsuario =:username AND u.claveUsuario =password";
     
-    public void crearActualizarUsuario(Usuario usuario) throws Exception
+    public void crearActualizarUsuario(Usuario usuario) throws HibernateException
     {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction transaction = session.getTransaction();
@@ -175,12 +175,18 @@ public class UsuarioDAO {
     public static void main(String[] args) throws Exception {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario p= new Usuario();
-        p.setIdusuario(1);
+        p.setClaveUsuario("rocky");
+        p.setCorreoUsuario("rocky@gmail.com");
+        p.setNombreUsuario("rocky");
+        p.setNombre("rocky");
+        p.setPaterno("R");
+        p.setMaterno("A");
+        p.setTipoUsuario('u');
         Usuario u=null;
         List l=null;
         try{
             //u=dao.select(p);
-            u=dao.login("dam","dam");
+            dao.crearActualizarUsuario(p);
             //l=dao.selectAll();
         }catch(HibernateException e){}
         System.out.println("Transaccion finalizada...");
