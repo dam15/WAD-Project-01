@@ -460,32 +460,51 @@ ddsmoothmenu.init({
         <div class="row">
           <div class="col-md-3">
               
-              
-            
-              
-            <form role="form" action="Welcome.do" method="post">
-              <div class="form-group">
-                  <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" maxlength="40">
-              </div>
-                  <div class="form-group">
-                  <input name="paterno" type="text" class="form-control" id="paterno" placeholder="Paterno" maxlength="40">
-              </div>
-                  <div class="form-group">
-                  <input name="materno" type="text" class="form-control" id="materno" placeholder="Materno" maxlength="40">
-              </div>
-                  <div class="form-group">
-                      <input name="correo" type="email" class="form-control" id="email" placeholder="Email" maxlength="40">
-              </div>
-                  <div class="form-group">
-                  <input name="Username" type="text" class="form-control" id="Username" placeholder="Nombre de usuario" maxlength="40">
-              </div>
-              <div class="form-group">
-                  <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña" maxlength="40">
-              </div>
-              <div>
-                  <input type="submit" class="btn btn-primary" value="Registrarse">
-              </div>
-            </form>
+              <html:form action="/registro" method="post" >
+            <table >
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <bean:write name="RegistroForm" property="error" filter="false"/>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.nombreU"/></td>
+                        <td><html:text property="nombreUsuario" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.password"/></td>
+                        <td><html:password property="claveUsuario" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.passwordConf"/></td>
+                        <td><html:password property="claveUsuarioConf" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.nombre"/></td>
+                        <td><html:text property="nombre" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.paterno"/></td>
+                        <td><html:text property="paterno" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.materno"/></td>
+                        <td><html:text property="materno" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td><bean:message key="index.registro.email"/></td>
+                        <td><html:text property="email" styleClass="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><html:submit value="Registrarse" styleClass="btn btn-primary"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>   
+
           </div>
         </div>
       </div>
