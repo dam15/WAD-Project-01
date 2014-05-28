@@ -183,7 +183,7 @@ http://www.templatemo.com
     
     <!--Obtener Usuario-->
     <%
-        String usuario = request.getParameter("nombreUsuario");
+        String usuario = request.getParameter("nombreUsuario"); 
     //String usuario = "Eric";
     %>
     <!--Fin de Obtener Usuario-->
@@ -384,8 +384,8 @@ http://www.templatemo.com
                 
                 <h:form enctype="multipart/form-data">
                 <h:panelGrid columns="2">
-                <h:outputLabel value="Cargar Archivo" for="fileUpload" />
-                <h:inputFile value="#{fileUploadFormBean.fileUpload}" id="fileUpload" />
+                <h:outputLabel value="Cargar Archivo" for="fileUpload" />               
+                <h:inputFile value="#{fileUploadFormBean.fileUpload}"  id="fileUpload" /> 
                 <input type="submit" name="Subir" value="Subir" class="btn btn-primary">
                 <h:commandButton value="Subir"/>
                 </h:panelGrid>
