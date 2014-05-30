@@ -175,20 +175,18 @@ public class UsuarioDAO {
     public static void main(String[] args) throws Exception {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario p= new Usuario();
-        p.setClaveUsuario("dani15");
-        p.setCorreoUsuario("d@gmail.com");
-        p.setNombreUsuario("dani15");
-        p.setNombre("DanieLa");
-        p.setPaterno("Aguilar");
-        p.setMaterno("Mayen");
-        p.setTipoUsuario('u');
-        Usuario u=null;
-        List l=null;
+        Usuario n=null;
+        p.setIdusuario(7);
+        n=dao.select(p);
+        n.setNombre("Rocky");
+        n.setPaterno("Williams");
+        n.setMaterno("Smith");
         try{
             //u=dao.select(p);
-            dao.crearActualizarUsuario(p);
+            dao.crearActualizarUsuario(n);
             //l=dao.selectAll();
         }catch(HibernateException e){}
+        System.out.println(n);
         System.out.println("Transaccion finalizada...");
         /*
         if(u==null)System.out.println("Esta vacio");

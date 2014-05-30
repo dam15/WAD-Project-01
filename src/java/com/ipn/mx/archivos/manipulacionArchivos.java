@@ -15,7 +15,8 @@ import java.io.IOException;
  */
 public class manipulacionArchivos {
     
-private String destino="/Users/eric/NetBeansProjects/WAD/WAD-Project-01/web/archivos/";
+private String destino2="/Users/eric/NetBeansProjects/WAD/WAD-Project-01/web/archivos/";
+private String destino="C:\\Users\\Diego\\Documents\\ESCOM\\SEMESTRE 6\\WAD\\EJERCICIOS\\JSF\\WAD_Proyecto\\web\\archivos\\";
 
 public String creaCarpetaUsuario(String usuario) throws IOException{
     String rutaUsuario=destino+usuario;

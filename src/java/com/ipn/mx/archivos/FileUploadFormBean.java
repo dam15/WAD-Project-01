@@ -25,7 +25,8 @@ import javax.servlet.http.Part;
 @RequestScoped
 public class FileUploadFormBean {
 private Part fileUpload;
-private String destino="/Users/eric/NetBeansProjects/WAD/WAD-Project-01/web/archivos/";
+private String destino2="/Users/eric/NetBeansProjects/WAD/WAD-Project-01/web/archivos/";
+private String destino="C:\\Users\\Diego\\Documents\\ESCOM\\SEMESTRE 6\\WAD\\EJERCICIOS\\JSF\\WAD_Proyecto\\web\\archivos\\";
 /**
      * Creates a new instance of FileUploadFormBean
      */

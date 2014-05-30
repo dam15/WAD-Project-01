@@ -386,7 +386,7 @@ ddsmoothmenu.init({
             data-cycle-prev="#prev"
             data-cycle-carousel-fluid=true
             >
-            <img alt="partner 1" src="images/partners/Struts_logo.gif" >
+            <img alt="partner 1" src="images/partners/Struts_logo.gif" width="100px" height="100px">
             <img alt="partner 2" src="images/partners/glassfish_logo.png" >
             <img alt="partner 3" src="images/partners/hibernate-logo.png" >
             <img alt="partner 4" src="images/partners/java-logo2.jpg" >
@@ -400,36 +400,36 @@ ddsmoothmenu.init({
     <!--Our Partner End-->
     <!--Our Client Start-->
     <div class="templatemo_reasonbg">
-    	<h2>What our clients say?</h2>
+    	<h2>¿Qué opinan nuestros clientes?</h2>
         <div class="container">
         	<div class="col-xs-11 templatemo_col12 templatemo_clientwrapper">
             	<div class="templatemo_clientimage">
-                <p class="templatemo_clientdes">Duis consequat ut quam ut sollicitudin. Donec eget congue ligula, eget pharetra urna. Nam tempor tellus sit amet bibendum dapibus.</p>
+                    <p class="templatemo_clientdes"><bean:message key="opinion1"/></p>
             	  <img src="images/client/1.jpg" alt="client image 1" />
                   <div class="clear"></div>
                   <div class="fa fa-circle mleft1"></div>
 			  	</div>
                 <div class="templatemo_clientimage">
-                <p class="templatemo_clientdes">Nam auctor elementum dolor. Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus.</p>
+                <p class="templatemo_clientdes"><bean:message key="opinion2"/></p>
   				<img src="images/client/2.jpg" alt="client image 2" /> 
                 <div class="clear"></div>
                   <div class="fa fa-circle mleft2"></div>				 
 				</div>
                 <div class="templatemo_clientimage">
-                <p class="templatemo_clientdes">Quisque tincidunt risus et enim. Vestibulum gravida sem at sem bibendum vehicula. Sed et leo. </p>
+                <p class="templatemo_clientdes"><bean:message key="opinion3"/></p>
   				<img src="images/client/3.jpg" alt="client image 3" /> 		
                 <div class="clear"></div>
                   <div class="fa fa-circle mleft3"></div>		 
 				</div>
                 <div class="templatemo_clientimage next templatemo_marginleft50">
-                <p class="templatemo_clientdes">Curabitur commodo arcu vel enim mollis consequat. Nulla pharetra tortor vel arcu. In rhoncus fermentum ipsum. </p>
+                <p class="templatemo_clientdes"><bean:message key="opinion4"/></p>
   				<img src="images/client/4.jpg" alt="client image 4" />
                 <div class="clear"></div>
                   <div class="fa fa-circle mleft4"></div>
  				 
 				</div>
               <div class="templatemo_clientimage next">
-                <p class="templatemo_clientdes">Nam auctor elementum dolor. Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus. </p>
+                <p class="templatemo_clientdes"><bean:message key="opinion5"/></p>
 		      <img src="images/client/5.jpg" alt="client image 5" />
  				 <div class="clear"></div>
                   <div class="fa fa-circle mleft5"></div>

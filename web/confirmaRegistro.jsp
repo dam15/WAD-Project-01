@@ -101,7 +101,7 @@ ddsmoothmenu.init({
                     <div class="clear"></div>
                     <h1><bean:message key="conf.info2"/></h1>
                     <div class="clear"></div>
-                    <p><bean:message key="conf.mensaje"/></p>
+                    <p><bean:message key="conf.mensaje"/><%request.getAttribute("correo");%></p>
                     <a class="btn btn-large btn-primary" href="index.jsp"><bean:message key="boton.regresar" /></a>
               </div>  
   </header>

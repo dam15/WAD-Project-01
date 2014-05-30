@@ -16,6 +16,8 @@ public class ManejadorSesiones {
     public static final String NOMBRE="nombre";
     public static final String TIPO="tipo";
     public static final String EMAIL="email";
+    public static final String MATERNO="materno";
+    public static final String PATERNO="paterno";
     
     public void createSession(HttpServletRequest request,HttpServletResponse response,
             String IDU,String nombreU,String tipoU,String email)
@@ -33,6 +35,8 @@ public class ManejadorSesiones {
         HttpSession s=request.getSession(true);
         s.setAttribute(ID, u.getNombre());
         s.setAttribute(NOMBRE, u.getNombre());
+        s.setAttribute(MATERNO, u.getMaterno());
+        s.setAttribute(PATERNO, u.getPaterno());
         s.setAttribute(TIPO, u.getTipoUsuario());
         s.setAttribute(EMAIL, u.getCorreoUsuario());
     }
@@ -61,6 +65,22 @@ public class ManejadorSesiones {
         HttpSession s=request.getSession(true);
         return (String)s.getAttribute(EMAIL);
     }
+    public String getPaterno(HttpServletRequest request)
+    {
+        HttpSession s=request.getSession(true);
+        return (String)s.getAttribute(PATERNO);
+    }
+    public String getMaterno(HttpServletRequest request)
+    {
+        HttpSession s=request.getSession(true);
+        return (String)s.getAttribute(MATERNO);
+    }
+    public int getID(HttpServletRequest request)
+    {
+        HttpSession s=request.getSession(true);
+        return Integer.parseInt((String)s.getAttribute(ID));
+    }
+    
     
     public boolean isSession(HttpServletRequest request)
     {

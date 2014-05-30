@@ -8,6 +8,7 @@
 
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
 <%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 
 <f:view>
 <html>
@@ -67,7 +68,7 @@ ddsmoothmenu.init({
             ManejadorSesiones sesion = new ManejadorSesiones();
             String nombreUsuario="";
             try{
-            nombreUsuario=sesion.getNombre(request);
+            nombreUsuario=sesion.getNombre(request)+" "+ sesion.getPaterno(request) +" "+ sesion.getMaterno(request);
             }catch(Exception e){e.printStackTrace();}
     %>
     
@@ -81,7 +82,7 @@ ddsmoothmenu.init({
         <div class="row">
           <div class="col-sm-3 col-md-3">
             <div class="logo">
-              <a rel="nofollow" href="http://www.templatemo.com/preview/templatemo_396_smoothy"><img src="images/templatemo_logo.png" alt="logo"></a>
+              <a rel="nofollow" href="#"><img src="images/templatemo_logo.png" alt="logo"></a>
             </div>
           </div>
           <div class="col-sm-9 col-md-9 templatemo_col9">
@@ -96,8 +97,8 @@ ddsmoothmenu.init({
                                             <li><a class="menu" href="#templatemo_portfolio">Portafolio</a></li>
                                             -->
                                             <li><a class="menu" href="#subirarchivos">Subir Archivo</a></li>
-                                            <li><a class="menu" href="perfil.jsp">Mi perfil</a></li>
-                                            <li><a class="menu" href="index.html">Logout</a></li>
+                                            <li><a class="menu" href="perfil.jsp">Actualizar Mi perfil</a></li>
+                                            <li><a class="menu" href="index.jsp">Logout</a></li>
                                             
                                             
                                         </ul>
@@ -406,20 +407,20 @@ ddsmoothmenu.init({
     <div class="templatemo_footer">
     	<div class="container">
        	  <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<h2>About Smoothy</h2>
-                <p>Etiam faucibus turpis id ipsum egestas porta. Cras in aliquet purus, ac varius turpis. Proin nibh mauris, lacinia at tincidunt egestas, tincidunt eleifend urna. Aliquam erat volutpat.</p>
+            	<h2>Acerca de AirPadlook</h2>
+                <p>Somos una compañia 100% mexicana y orgullosamente Politécnica. Tabajamos bajo los estandares de los frameworks
+                de Struts, Hibernate y JSF para garantizar la calidad que usted se merece.</p>
           </div>
             <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            	<h2>Services</h2>
+            	<h2>Servicios</h2>
                 <ul>
-                  <li>Integer condimentum</li>
-                  <li>Quisque eget mi felis</li>
-                  <li>Mauris placerat lacinia</li>
-                  <li>Cras molestie imperdiet</li>
-                  <li>Duis vel consectetur</li>
+                  <li>Almacenamieto de archivos</li>
+                  <li>Seguridad web</li>
+                  <li>Uso de FrameWorks</li>
+                  <b><li>Calificacion final de 10 :D</li></b>
                 </ul>
                 <div class="clear"></div>
-                <div class="templatemo_morelink"><a href="#">and more... </a></div>
+                <div class="templatemo_morelink"><a href="#">y mucho más ... </a></div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
             	<h2>Flicker</h2>
@@ -438,28 +439,30 @@ ddsmoothmenu.init({
         </div>
           </div>
             <div class="col-xs-6 col-sm-6 col-md-3 templatemo_col12">
-            <h2>Contact</h2>
+            <h2>Contacto</h2>
             	<span class="left col-xs-1 fa fa-map-marker"></span>
-                <span class="right col-xs-11">120-240 Nam bibendum consectetur diam et fringilla</span>
+                <span class="right col-xs-11">IPN ESCOM</span>
                 <div class="clear height10"></div>
                 <span class="left col-xs-1 fa fa-phone"></span>
-                <span class="right col-xs-11">010-020-0680</span>
+                <span class="right col-xs-11">55 69 69 69</span>
                 <div class="clear height10"></div>
                 <span class="left col-xs-1 fa fa-envelope"></span>
-                <span class="right col-xs-11">contact@company.com</span>
+                <span class="right col-xs-11">ipn@ipn.com</span>
                 <div class="clear height10"></div>
                 <span class="left col-xs-1 fa fa-globe"></span>
-                <span class="right col-xs-11">www.templatemo.com</span>
+                <span class="right col-xs-11">www.isc.escom.com</span>
                 <div class="clear"></div>
             </div>
         </div>
     </div>
    <!--Footer End-->
-	<!-- Bottom Start -->
+
+    
+    <!-- Bottom Start -->
     <div class="templatemo_bottom">
     	<div class="container">
         	<div class="row">
-            	<div class="left">Copyright © 2014 <a href="#">Your Company Name</a> - <a href="#">HTML5 Template</a> by <a href="http://www.templatemo.com/preview/templatemo_396_smoothy">Smoothy</a></div>
+                    <div class="left">Copyright © 2014 <a href="#"><bean:message key="index.company"/></a>by <a href="#"><bean:message key="index.about"/></a></div>
                 <div class="right">
                 	<a href="#"><div class="fa fa-rss soc"></div></a>
                     <a href="#"><div class="fa fa-twitter soc"></div></a>

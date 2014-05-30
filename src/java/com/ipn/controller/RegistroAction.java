@@ -78,6 +78,7 @@ public class RegistroAction extends org.apache.struts.action.Action {
             dao.crearActualizarUsuario(u);
             DemoEnvioMail mail = new DemoEnvioMail();
             mail.enviarMail(u.getCorreoUsuario(),ASUNTO,MENSAJE);
+            request.setAttribute("correo", u.getCorreoUsuario());
             return mapping.findForward(SUCCESS);
         }catch(HibernateException e){e.printStackTrace();}
         

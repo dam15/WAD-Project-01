@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="ActualizaForm" type="com.ipn.controller.ActualizaForm"/>
         <form-bean name="RegistroForm" type="com.ipn.controller.RegistroForm"/>
         <form-bean name="LoginForm" type="com.ipn.controller.LoginForm"/>
         <form-bean name="FileUploadFormBean" type="com.ipn.mx.archivos.FileUploadFormBean"/>
@@ -28,6 +29,10 @@
         </action>
         <action name="RegistroForm" path="/registro" scope="request" type="com.ipn.controller.RegistroAction" validate="false">
             <forward name="success" path="/confirmaRegistro.jsp"/>
+            <forward name="failure" path="/index.jsp"/>
+        </action>
+        <action name="ActualizaForm" path="/actualiza" scope="request" type="com.ipn.controller.ActualizaAction" validate="false">
+            <forward name="success" path="/faces/Login_SubirArchivos.jsp"/>
             <forward name="failure" path="/index.jsp"/>
         </action>
     </action-mappings>
