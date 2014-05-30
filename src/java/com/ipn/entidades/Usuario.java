@@ -3,6 +3,7 @@ package com.ipn.entidades;
 
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,8 +23,14 @@ import javax.persistence.Table;
 @Table(name="usuario"
     ,catalog="wad_proyecto"
 )
+@NamedNativeQueries({
+    @NamedNativeQuery(
+            name="userLoginU",
+            query="call userLogin(:username,:pass)",
+            resultClass = Usuario.class
+    )
+})
 public class Usuario  implements java.io.Serializable {
-
 
      private Integer idusuario;
      private String nombre;
@@ -31,32 +40,11 @@ public class Usuario  implements java.io.Serializable {
      private String claveUsuario;
      private String nombreUsuario;
      private char tipoUsuario;
-     private Set archivos = new HashSet(0);
+    // private List archivos;
 
     public Usuario() {
     }
 
-	
-    public Usuario(String nombre, String paterno, String materno, String correoUsuario, String claveUsuario, String nombreUsuario, char tipoUsuario) {
-        this.nombre = nombre;
-        this.paterno = paterno;
-        this.materno = materno;
-        this.correoUsuario = correoUsuario;
-        this.claveUsuario = claveUsuario;
-        this.nombreUsuario = nombreUsuario;
-        this.tipoUsuario = tipoUsuario;
-    }
-    public Usuario(String nombre, String paterno, String materno, String correoUsuario, String claveUsuario, String nombreUsuario, char tipoUsuario, Set archivos) {
-       this.nombre = nombre;
-       this.paterno = paterno;
-       this.materno = materno;
-       this.correoUsuario = correoUsuario;
-       this.claveUsuario = claveUsuario;
-       this.nombreUsuario = nombreUsuario;
-       this.tipoUsuario = tipoUsuario;
-       this.archivos = archivos;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -138,14 +126,19 @@ public class Usuario  implements java.io.Serializable {
     public void setTipoUsuario(char tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
-
+/**
 @OneToMany(fetch=FetchType.LAZY, mappedBy="usuario")
-    public Set getArchivos() {
+    public List getArchivos() {
         return this.archivos;
     }
     
-    public void setArchivos(Set archivos) {
+    public void setArchivos(List archivos) {
         this.archivos = archivos;
+    }
+*/
+    @Override
+    public String toString() {
+        return "Usuario{" + "idusuario=" + idusuario + ", nombre=" + nombre + ", paterno=" + paterno + ", materno=" + materno + ", correoUsuario=" + correoUsuario + ", claveUsuario=" + claveUsuario + ", nombreUsuario=" + nombreUsuario + ", tipoUsuario=" + tipoUsuario + '}';
     }
 
 

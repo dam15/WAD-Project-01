@@ -32,14 +32,6 @@ public class Archivo  implements java.io.Serializable {
     public Archivo() {
     }
 
-    public Archivo(Usuario usuario, String nombreArchivo, String tipoArchivo, String size, String path) {
-       this.usuario = usuario;
-       this.nombreArchivo = nombreArchivo;
-       this.tipoArchivo = tipoArchivo;
-       this.size = size;
-       this.path = path;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -53,7 +45,7 @@ public class Archivo  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="usuario_idusuario", nullable=false)
+    @JoinColumn(name="usuario_idusuario",referencedColumnName = "idusuario", nullable=false)
     public Usuario getUsuario() {
         return this.usuario;
     }
